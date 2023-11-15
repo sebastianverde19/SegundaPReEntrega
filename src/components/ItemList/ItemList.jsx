@@ -9,13 +9,13 @@ const ItemList = ({products}) => {
     const [filteredItems, setFilteredItems] = useState([]);
 
     useEffect(() => {
-        if (!id) {
-            setFilteredItems(products);
+    if (!categoryId) {
+    setFilteredItems(products);
         } else {
             const filtered = products.filter((product) => product.category === categoryId);
             setFilteredItems(filtered);
         }
-    }, [id]);
+    }, [categoryId, products]); 
 
     return (
         <div className="item-list-container">
