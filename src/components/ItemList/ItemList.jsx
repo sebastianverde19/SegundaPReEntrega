@@ -12,7 +12,7 @@ const ItemList = ({products}) => {
         if (!id) {
             setFilteredItems(products);
         } else {
-            const filtered = products.filter((product) => product.category === id);
+            const filtered = products.filter((product) => product.category === categoryId);
             setFilteredItems(filtered);
         }
     }, [id]);
