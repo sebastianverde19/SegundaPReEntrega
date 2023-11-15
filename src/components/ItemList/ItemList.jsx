@@ -20,7 +20,7 @@ const ItemList = ({products}) => {
     return (
         <div className="item-list-container">
             {filteredItems.map((product) => (
-            <Link to={"item/" + product.id} key={product.id} className='link'>
+            <Link to={/category/${product.category}/${product.id}} key={product.id} className='link'>
                 <Item
                     title={product.title}
                     description={product.description}
