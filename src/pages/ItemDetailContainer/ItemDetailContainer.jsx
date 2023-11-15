@@ -5,10 +5,10 @@ import products from '../../components/Products/Products';
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-  const { id } = useParams();
+  const { categoryId, productId } = useParams();
 
   const fetchProduct = () => {
-      const selectedProduct = products.find((p) => p.id === parseInt(id));
+      const selectedProduct = products.find((p) => p.id === parseInt(productId) && p.category === categoryId);
       if (selectedProduct) {
           setProduct(selectedProduct);
       }
