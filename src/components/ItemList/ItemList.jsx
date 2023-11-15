@@ -5,7 +5,7 @@ import './ItemList.css';
 import { useEffect, useState } from 'react';
 
 const ItemList = ({products}) => {
-    const { id } = useParams();
+    const { id: categoryId } = useParams();
     const [filteredItems, setFilteredItems] = useState([]);
 
     useEffect(() => {
